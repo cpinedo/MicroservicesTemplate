@@ -1,16 +1,18 @@
 server:
   port:
-    8079
+    8888
 
 spring:
   cloud:
     config:
       server:
         git:
-          uri: https://github.com/cpinedo/MicroservicesTemplate
+          uri: https://cpinedop@bitbucket.org/cpinedop/config-test.git
           search-paths: configurations
+          skipSslValidation: true
           username: ${GIT_USER}
           password: ${GIT_PASSWORD}
+          clone-on-start: true
   security:
     user:
       name: theUser
