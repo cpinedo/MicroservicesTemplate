@@ -19,7 +19,7 @@ public class BasicResourceBResource {
     private String phrase;
 
     @GetMapping
-    public CompletableFuture<BasicResource> resourceA() {
+    public CompletableFuture<BasicResource> resourceB() {
         return CompletableFuture.supplyAsync(() -> BasicResource.of("Basic " + letter, phrase));
     }
 }

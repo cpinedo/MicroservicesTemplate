@@ -5,7 +5,14 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class ResourceAClient {
-    public ResourceA getData(){
-        return new ResourceAData();
+
+    private final ResourceAFeignClient resourceAClient;
+
+    public ResourceAClient(ResourceAFeignClient resourceAClient) {
+        this.resourceAClient = resourceAClient;
+    }
+
+    public ResourceA getData() {
+        return resourceAClient.resourceA();
     }
 }
