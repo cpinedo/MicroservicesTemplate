@@ -1,0 +1,17 @@
+server:
+  port:
+    8079
+
+spring:
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/cpinedo/MicroservicesTemplate
+          search-paths: configurations
+          username: ${GIT_USER}
+          password: ${GIT_PASSWORD}
+  security:
+    user:
+      name: theUser
+      password: fooPass10Bar!

@@ -1,0 +1,7 @@
+server:
+  port: 8082
+
+application:
+  resource:
+    letter: B
+    phrase: This is the configuration phrase
