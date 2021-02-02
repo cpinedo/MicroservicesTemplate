@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: apigateway
+  config:
+    import: configserver:http://127.0.0.1:8888
+  cloud:
+    config:
+      username: theUser
+      password: fooPass10Bar!
+
+
