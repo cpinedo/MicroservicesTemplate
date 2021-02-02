@@ -17,6 +17,10 @@ public class GetAggregatedResource {
     }
 
     public Aggregated getData() {
-        return new Aggregated(BasicResource.of("Basic C"), resourceAClient.getData(), resourceBClient.getData());
+        return new Aggregated(
+                BasicResource.of("Basic C"),
+                resourceAClient.getData(),
+                resourceBClient.getData()
+        );
     }
 }
