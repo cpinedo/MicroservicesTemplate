@@ -5,3 +5,14 @@ application:
   resource:
     letter: B
     phrase: This is the configuration phrase
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8099/eureka/
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"

@@ -1,2 +1,19 @@
 server:
   port: 8083
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8099/eureka/
+
+resilience4j.circuitbreaker:
+  instances:
+    backendC:
+      registerHealthIndicator: true
+      slidingWindowSize: 100
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
