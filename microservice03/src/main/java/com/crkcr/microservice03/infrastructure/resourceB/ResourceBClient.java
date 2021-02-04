@@ -9,7 +9,14 @@ import org.springframework.stereotype.Service;
 public class ResourceBClient {
     private final ResourceBFeignClient resourceBClient;
 
-    public ResourceBClient(ResourceBFeignClient resourceBClient) {
+    public ResourceBClient(/*@Qualifier("feignClient") Client ribbonClient*/ResourceBFeignClient resourceBClient) {
+//        resourceBClient = Feign.builder()
+//                .client(ribbonClient)
+//                .encoder(new GsonEncoder())
+//                .decoder(new GsonDecoder())
+//                .logger(new Slf4jLogger(ResourceBFeignClient.class))
+//                .logLevel(Logger.Level.FULL)
+//                .target(ResourceBFeignClient.class, "http://microservice02");
         this.resourceBClient = resourceBClient;
     }
 

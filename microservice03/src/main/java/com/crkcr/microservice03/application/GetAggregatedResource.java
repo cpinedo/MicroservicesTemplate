@@ -1,5 +1,7 @@
 package com.crkcr.microservice03.application;
 
+import brave.Span;
+import brave.propagation.TraceContext;
 import com.crkcr.microservice03.domain.BasicResource;
 import com.crkcr.microservice03.infrastructure.resourceA.ResourceAClient;
 import com.crkcr.microservice03.infrastructure.resourceB.ResourceBClient;
@@ -16,10 +18,10 @@ public class GetAggregatedResource {
         this.resourceBClient = resourceBClient;
     }
 
-    public Aggregated getData() {
+    public Aggregated getData(TraceContext span) {
         return new Aggregated(
                 BasicResource.of("Basic C"),
-                resourceAClient.getData(),
+                resourceAClient.getData(span),
                 resourceBClient.getData()
         );
     }
