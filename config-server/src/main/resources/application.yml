@@ -10,8 +10,8 @@ spring:
           uri: https://cpinedop@bitbucket.org/cpinedop/config-test.git
           search-paths: configurations
           skipSslValidation: true
-          username: ${GIT_USER}
-          password: ${GIT_PASSWORD}
+#          username: ${GIT_USER}
+#          password: ${GIT_PASSWORD}
           clone-on-start: true
   security:
     user:

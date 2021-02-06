@@ -25,9 +25,6 @@ dependencies {
     implementation 'org.springframework.cloud:spring-cloud-starter-config'
     implementation 'org.springframework.cloud:spring-cloud-starter-netflix-eureka-client'
     implementation 'org.springframework.cloud:spring-cloud-starter-openfeign'
-
-//    compile group: 'io.github.openfeign', name: 'feign-gson', version: '11.0'
-//    compile group: 'io.github.openfeign.opentracing', name: 'feign-opentracing', version: '0.4.1'
     implementation 'org.springframework.cloud:spring-cloud-starter-sleuth'
     implementation 'org.springframework.cloud:spring-cloud-sleuth-zipkin'
 
